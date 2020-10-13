@@ -7,15 +7,21 @@
 
     /*  = = = = = = = = = = = = = 
             fixed menu
-        = = = = = = = = = = = = = */
+        = = = = = = = = = = = = = *
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 300) {
             $('.header-area').addClass('fixed-menu');
         } else {
             $('.header-area').removeClass('fixed-menu');
         }
+    });*/
+ $(window).on('scroll', function () {
+        if ($(".navbar").offset().top > 25) {
+            $('.navbar-nav').addClass('show');
+        } else {
+            $('.navbar-nav').removeClass('show');
+        }
     });
-
     /*  = = = = = = = = = = = = = 
             Smooth scroll
         = = = = = = = = = = = = =  */
