@@ -5,51 +5,48 @@
 
     'use strict';
 
-    /*  = = = = = = = = = = = = = 
-            fixed menu
-        = = = = = = = = = = = = = *
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 300) {
-            $('.header-area').addClass('fixed-menu');
-        } else {
-            $('.header-area').removeClass('fixed-menu');
-        }
-    });*/
- $(window).on('scroll', function () {
-        if ($(".navbar").offset().top > 25) {
-            $('.navbar-nav').addClass('show');
-        } else {
-            $('.navbar-nav').removeClass('show');
-        }
-    });
-    /*  = = = = = = = = = = = = = 
-            Smooth scroll
-        = = = = = = = = = = = = =  */
-    $('a.nav-link').on('click', function (e) {
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 1000);
-        e.preventDefault();
-    });
+    var $body = $("body"),
+    $window = $(window);
 
-    /*  = = = = = = = = = = = = =  =
-            bootstrap scrollspy
-        = = = = = = = = = = = = =  = */
-    $(window).on('scroll', function () {
-        if ($(window).scrollTop() > 0) {
-            $('body').scrollspy({
-                target: '.navbar',
-                offset: 84
-            });
-        } else {
-            $('body').scrollspy({
-                target: '.navbar',
-                offset: -1
-            });
-        }
-    });
+/*============================= Navigation Section ==============================*/
 
+$window.on('scroll' ,function () {
+if ($(".navbar").offset().top > 25) {
+    $(".navbar-default").addClass("small");
+} else {
+    $(".navbar-default").removeClass("small");
+}
+});
+
+/*============================= Navigation Section ==============================*/
+
+$window.on('scroll' ,function () {
+if ($(".navbar").offset().top > 25) {
+    $(".navbar-nav").addClass("show");
+} else {
+    $(".navbar-nav").removeClass("show");
+}
+});
+
+/*============================= Smoothscroll js ==============================*/
+
+$('.navbar-default').on('click', 'a', function (event) {
+var $anchor = $(this);
+$('html, body').stop().animate({
+    scrollTop: $($anchor.attr('href')).offset().top - 1
+}, 1000);
+event.preventDefault();
+});
+$('.navbar-nav>li>a').on('click', function(){
+$('.navbar-collapse').collapse('hide');
+});
+/*====================================== jquery scroll spy ========================================*/
+
+$body.scrollspy({
+target: ".navbar-collapse",
+offset: 15
+
+});
     /*  = = = = = = = = = = = = =  =
             banner typed
         = = = = = = = = = = = = =  = */
