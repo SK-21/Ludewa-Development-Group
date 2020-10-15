@@ -1,16 +1,14 @@
-/*  ----------------------------------------------------
-    table of js plugin
-    ----------------------------------------------------
+/* JS PLUGIN *
 
-*   01. Bootstrap v3.3.7
-*   02. Owl Carousel v2.3.0
-*   03. Jarallax v1.8.0
-*   04. Barfiller v1.0.1
-*   05. Waypoints V4.0.1
-*   06. wmBox
-*   07. Isotope v3.0.4
-*   08. Lightbox v2.9.0
-*   09. GMAP3 v7.2
+*   1. Bootstrap v3.3.7
+*   2. Owl Carousel v2.3.0
+*   3. Jarallax v1.8.0
+*   4. Barfiller v1.0.1
+*   5. Waypoints V4.0.1
+*   6. wmBox
+*   7. Isotope v3.0.4
+*   8. Lightbox v2.9.0
+*   9. GMAP3 v7.2
 *   10. scrollup v2.4.1
 *   
 */
